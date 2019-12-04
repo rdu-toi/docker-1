@@ -1,7 +1,10 @@
-docker run -itd --name Abathur -v ~/:/root -p 3000:3000 python:2-slim;
-docker exec Abathur "pip install Flask";
-docker exec Abathur "from flask import Flask";
-docker exec Abathur "app = Flask(__name__)";
-docker exec Abathur "@app.route('/')";
-docker exec Abathur "def hello_world():";
-docker exec Abathur "	return "Hello World!"";
+docker run -it --name Abathur -v ~/:/root -p 3000:3000 python:2-slim;
+# import subprocess
+# subprocess.check_call(["pip", "install", "flask"])
+# from flask import Flask
+# app = Flask(__name__)
+# @app.route('/')
+# def hello_world():
+# 	return "<h1>Hello World!<h1>"
+
+# app.run(host="0.0.0.0", port="3000")
