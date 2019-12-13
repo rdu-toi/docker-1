@@ -1,0 +1,7 @@
+# The exercised asked to display the real-time logs of only one replica of the 'engineering-bay' service
+
+# This grabs the ID of the first replica and passes the result to the next command
+value=$(docker service ps -q engineering-bay |sed '1q;d')
+
+# This command takes care of displaying the real-time logs
+docker service logs --follow "$value"

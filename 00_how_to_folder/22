@@ -1,0 +1,6 @@
+# This line stores the output for adding a worker to a swarm from the command 'docker swarm join-token worker'.
+# This will only work if the command always gets outputed to the third line.
+value=$(docker swarm join-token worker |sed '3q;d')
+
+# This command ssh's into Aiur and adds the it to the local swarm where Char is manager.
+docker-machine ssh Aiur "eval " $value""
