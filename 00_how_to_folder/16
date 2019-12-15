@@ -1,1 +1,1 @@
-docker container logs spawning-pool;
+docker container logs spawning-pool -f;
