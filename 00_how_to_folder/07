@@ -1,1 +1,1 @@
-docker inspect overlord | grep '"IPAddress"' | head -n 1;
+docker inspect overlord | grep '"IPAddress"' | head -n 1 | sed 's/[^0-9.]*//g' ;

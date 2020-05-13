@@ -1,4 +1,4 @@
-docker run -it --name Abathur -v ~/:/root -p 3000:3000 python:2-slim;
+docker run -it --name Abathur -v ~/Desktop:/root -p 3000:3000 python:2-slim;
 # import subprocess
 # subprocess.check_call(["pip", "install", "flask"])
 # from flask import Flask

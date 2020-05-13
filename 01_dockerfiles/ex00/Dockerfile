@@ -3,6 +3,6 @@
 
 FROM alpine
 
-RUN apk update; apk add vim
+RUN apk update && apk add vim
 
 CMD [ "vim", "hello_world.c" ]
